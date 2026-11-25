@@ -1242,7 +1242,7 @@ void QGraphDoc::OnLayerConvert()
       int type = m_meta_graph->getDisplayedShapeGraph().getMapType();
       // map in is an axial map (of sorts, something with a graph...)
       dlg.m_mapin = MAKELAYER_AXIAL;
-      dlg.m_origin = QString("Shape Graphs: ") + QString(m_meta_graph->getDisplayedShapeGraph().getName().c_str());
+      dlg.m_origin = QCoreApplication::translate("GraphDoc", "Shape Graphs: ") + QString(m_meta_graph->getDisplayedShapeGraph().getName().c_str());
       if (type == ShapeMap::AXIALMAP) {
          // note, ShapeMap::ALLLINEMAP is deliberately excluded, as making a segment map from it would overproduce segments:
          dlg.m_mapout = MAKELAYER_DRAWING | MAKELAYER_DATA | MAKELAYER_SEGMENT;
@@ -1254,7 +1254,7 @@ void QGraphDoc::OnLayerConvert()
    }
    else if (m_meta_graph->viewingProcessedShapes()) {
       //
-      dlg.m_origin = QString("Data Maps: ") + QString(m_meta_graph->getDisplayedDataMap().getName().c_str());
+      dlg.m_origin = QCoreApplication::translate("GraphDoc", "Data Maps: ") + QString(m_meta_graph->getDisplayedDataMap().getName().c_str());
       // possible to go to anything apart from a data map
       dlg.m_mapout = MAKELAYER_DRAWING | MAKELAYER_AXIAL | MAKELAYER_CONVEX | MAKELAYER_SEGMENT;
    }

@@ -1,0 +1,653 @@
+  1| depthmapX - Set Colour Scale
+  2| depthmapX Alert
+  3| for writing
+  4|")
+  5|% of line length
+  6|%1
+  7|&%1 %2
+  8|&3D View
+  9|&Add Column
+ 10|&Add connections
+ 11|&Agent Tools
+ 12|&Angular Step
+ 13|&Attribute Summary...
+ 14|&Attributes
+ 15|&Axial Connections as CSV...
+ 16|&Axial Connections as Dot...
+ 17|&Break connections
+ 18|&Cancel
+ 19|&Clear
+ 20|&Close
+ 21|&Colour Range
+ 22|&Convert Active Map...
+ 23|&Delete...
+ 24|&Edit
+ 25|&Export
+ 26|&Export Screen...
+ 27|&Export links...
+ 28|&Export map geometry...
+ 29|&Export map...
+ 30|&File
+ 31|&Help
+ 32|&Import...
+ 33|&Load Agent Program
+ 34|&Map
+ 35|&Merge connections
+ 36|&Metric Step
+ 37|&New
+ 38|&New...
+ 39|&Open...
+ 40|&Pinned area
+ 41|&Print...
+ 42|&Push Values
+ 43|&Recentre View
+ 44|&Remove Column
+ 45|&Rename Column...
+ 46|&Run Agent Analysis
+ 47|&Run Angular Segment Analysis...
+ 48|&Run Graph Analysis...
+ 49|&Run Visibility Graph Analysis...
+ 50|&Save
+ 51|&Scatter Plot
+ 52|&Segment
+ 53|&Segment Connections as CSV...
+ 54|&Selected area
+ 55|&Table
+ 56|&Tools
+ 57|&Topological Step
+ 58|&Undo
+ 59|&Update Column
+ 60|&View
+ 61|&Visibility
+ 62|&Visibility Step
+ 63|&Window
+ 64|&Zoom to Selection
+ 65|'%1' has been modified.\nDo you want to save your changes?
+ 66|'depthmapX' runs with basic measures by default,\nonly change it if you know what you are doing...
+ 67|(1024 approximates full angular analysis)
+ 68|(C) 2000-2010 University College London, Alasdair Turner, Eva Friedrich\n(C) 2011-2014 Tasos Varoudis\n(C) 2017 Christian Sailer, Petros Koutsolampros
+ 69|(Not USED!) http://www.vr.ucl.ac.uk/depthmap/alerts
+ 70|*.eps
+ 71|.graph
+ 72|0
+ 73|0 (fastest)
+ 74|16 (prettiest)
+ 75|2
+ 76|3D Filled
+ 77|3D Pan
+ 78|3D Rot
+ 79|3D Zoom
+ 80|3DView
+ 81|4
+ 82|40
+ 83|8
+ 84|:/images/cur/icon-1-1.png
+ 85|:/images/cur/icon-1-2.png
+ 86|:/images/cur/icon-1-3.png
+ 87|:/images/cur/icon-1-4.png
+ 88|:/images/cur/icon-1-5.png
+ 89|:/images/win/b-1-1.png
+ 90|:/images/win/b-1-10.png
+ 91|:/images/win/b-1-11.png
+ 92|:/images/win/b-1-12.png
+ 93|:/images/win/b-1-13.png
+ 94|:/images/win/b-1-14.png
+ 95|:/images/win/b-1-15.png
+ 96|:/images/win/b-1-16.png
+ 97|:/images/win/b-1-17.png
+ 98|:/images/win/b-1-18.png
+ 99|:/images/win/b-1-19.png
+100|:/images/win/b-1-2.png
+101|:/images/win/b-1-3.png
+102|:/images/win/b-1-4.png
+103|:/images/win/b-1-5.png
+104|:/images/win/b-1-6.png
+105|:/images/win/b-1-7.png
+106|:/images/win/b-1-8.png
+107|:/images/win/b-1-9.png
+108|:/images/win/b-5-19.png
+109|:/images/win/b-5-21.png
+110|<!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;>\n<html><head><meta name=&quot;qrichtext&quot; content=&quot;1&quot; /><style type=&quot;text/css&quot;>\np, li { white-space: pre-wrap; }\n</style></head><body style=&quot; font-family:'.SF NS Text'; font-size:13pt; font-weight:400; font-style:normal;&quot;>\n<p style=&quot; margin-top:12px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;><span style=&quot; font-family:'Courier New,courier'; font-size:14pt; color:#000000;&quot;>(c) 2000-2010 University College London, Alasdair Turner, Eva Friedrich<br />(c) 2011-2014, Tasos Varoudis<br />(c) 2017 Christian Sailer, Petros Koutsolampros</span></p>\n<p style=&quot; margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;><span style=&quot; font-family:'MS Shell Dlg 2'; font-size:8.25pt;&quot;><br /></span></p>\n<p style=&quot; margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;><span style=&quot; font-family:'Courier New,courier'; font-size:14pt; color:#000000;&quot;>This program is free software: you can redistribute it and/or modify it under the terms of the GNU General Public License as published by the Free Software Foundation, either version 3 of the License, or (at your option) any later version.</span></p>\n<p style=&quot; margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;><span style=&quot; font-family:'MS Shell Dlg 2'; font-size:8.25pt;&quot;><br /></span></p>\n<p style=&quot; margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;><span style=&quot; font-family:'Courier New,courier'; font-size:14pt; color:#000000;&quot;>This program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU General Public License for more details.</span></p>\n<p style=&quot; margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;><span style=&quot; font-family:'MS Shell Dlg 2'; font-size:8.25pt;&quot;><br /></span></p>\n<p style=&quot; margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;><span style=&quot; font-family:'Courier New,courier'; font-size:14pt; color:#000000;&quot;>You should have received a copy of the GNU General Public License along with this program. If not, see <http://www.gnu.org/licenses/>.</span></p></body></html>
+111|<< Use attribute
+112|<Unsaved>
+113|<html><head/><body><p><a href=&quot;http://en.wikipedia.org/wiki/Alasdair_Turner&quot;><span style=&quot; text-decoration: underline; color:#0000ff;&quot;>http://en.wikipedia.org/wiki/Alasdair_Turner</span></a></p></body></html>
+114|<html><head/><body><p><a href=&quot;https://github.com/SpaceGroupUCL/depthmapX&quot;><span style=&quot; text-decoration: underline; color:#0000ff;&quot;>https://github.com/varoudis/depthmapX</span></a></p></body></html>
+115|<html><head/><body><p><img src=&quot;:/images/depthmapX.png&quot;/></p></body></html>
+116|<html><head/><body><p><span style=&quot; font-size:24pt;&quot;>depthmapX</span></p><p><span style=&quot; font-size:12pt;&quot;>Multi-Platform Spatial Network Analysis Software</span></p><p><a href=&quot;https://github.com/varoudis/depthmapX&quot;><span style=&quot; text-decoration: underline; color:#0000ff;&quot;>https://github.com/varoudis/depthmapX</span></a></p><p><span style=&quot; font-size:10pt;&quot;>(C) 2000-2010 University College London, Alasdair Turner, Eva Friedrich<br/>(C) 2011-2014 Tasos Varoudis, UCL<br/>(C) 2017 Christian Sailer, Petros Koutsolampros</span></p><p><br/></p><p><span style=&quot; font-size:12pt;&quot;>In memory of Alasdair Turner </span></p></body></html>
+117|A&rrange Icons
+118|A&xial / Convex / Pesh
+119|About &depthmapX...
+120|About depthmapX
+121|Accept
+122|Add
+123|Add Agent
+124|Add column to the active map\nAdd Column
+125|Agent Analysis Setup
+126|Agent Trails
+127|Agent program parameters
+128|Agent set parameters
+129|Agents Pause
+130|Agents Play
+131|Agents Stop
+132|All files (*.*)
+133|Allow highlighting shapes on hover
+134|An error occurred during analysis.
+135|An error was found in the import file
+136|An unknown error occurred during analysis.
+137|Analyse currently displayed axial line map\nAxial analysis
+138|Analysing graph...
+139|Analysis Options
+140|Analysis Type
+141|Analysis cancelled
+142|Analysis cancelled.
+143|Analysis failed
+144|Analysis length(timesteps)
+145|Angular
+146|Angular distance from current selection\nAngular Depth
+147|Another Depthmap process is running, please wait until it completes
+148|Any occlusions
+149|Apply
+150|Apply formula to selected objects only
+151|Apply query to selected objects only
+152|Apply to All
+153|Apply to selected shapes only
+154|Are you sure you want to delete the currently displayed column?
+155|Are you sure you want to delete this map?\nThis action cannot be undone
+156|Arrange icons at the bottom of the window\nArrange Icons
+157|Arrange windows as non-overlapping tiles\nTile Windows
+158|Arrange windows so they overlap\nCascade Windows
+159|Attempting to cancel
+160|Attribute
+161|Attribute\nAtrribute
+162|Attribute Properties
+163|Attribute Summary
+164|AttributesList
+165|Augmented Fill
+166|Augmented Fill grid spaces with points\nFill
+167|Author
+168|Average
+169|Axial Analysis Options
+170|Axial Map
+171|Background
+172|Blue
+173|C&ascade
+174|CAT
+175|CSV
+176|CSV graph file (*.csv)
+177|Calculate angular relationships
+178|Calculate isovist properties
+179|Calculate metric relationships
+180|Calculate through vision
+181|Calculate visibility relationships
+182|Calculating angular depth...
+183|Calculating metric depth...
+184|Calculating step depth...
+185|Calculating topological depth...
+186|Can't save screen as the Depthmap window is not initialised
+187|Cancel
+188|Cannot convert text to number
+189|Cannot delete: the geometry forming this graph cannot be edited.
+190|Cannot delete: this graph is currently uneditable.
+191|Cannot edit locked column
+192|Cannot perform conversion on this map type
+193|Cannot read file %1:\n%2.
+194|Cannot remove locked column
+195|Cannot rename locked column
+196|Cannot write file %1:\n%2.
+197|Change the printer and printing options\nPrint Setup
+198|Change the printing options\nPage Setup
+199|Change to make
+200|Chiron and Alasdair Transfer Format file (*.cat)\n
+201|Choose Attribute
+202|Choose Layer
+203|Click &quot;OK&quot; to Accept the License or Cancel to Exit...
+204|Click and drag to move map\nDrag
+205|Close
+206|Close the active graph workspace\nClose Workspace
+207|Column
+208|Column &Properties...
+209|Column name cannot be empty
+210|Comma separated values file (*.csv)\n
+211|Construct all line axial map from a seed point\nAxial Map
+212|Constructing BSP tree to calculate isovist...
+213|Constructing BSP tree to calculate isovists...
+214|Constructing all line axial map...
+215|Constructing axial map...
+216|Constructing convex map...
+217|Constructing data map...
+218|Constructing fewest line axial map...
+219|Constructing graph...
+220|Constructing segment map...
+221|Context Fill
+222|Context Fill grid spaces with points\nFill
+223|Continue
+224|Convert Data Map Lines to Merge Points
+225|Convert Data Map Points to Unlinks
+226|Convert Drawing &Map...
+227|Convert Map &Shapes...
+228|Convert Map Shapes
+229|Convert displayed data map lines to merge points for current visibility graph
+230|Convert displayed data map points to unlinks for current axial map
+231|Convert points to polygons;
+232|Convert shapes to other shapes within the current map
+233|Convert the current selection to a new map layer
+234|Convex Map
+235|Copy &Data
+236|Copy &Screen
+237|Copy attributes to new map
+238|Copy the screen contents to clipboard\nCopy Screen
+239|Copyright message (overwritten at runtime)
+240|Couldn't create new layer.\nPlease note there is a limit of 64 layers per map.
+241|Count
+242|Create New Map
+243|Create a new graph workspace\nNew Workspace
+244|Create a new map
+245|Create a new map from the active map
+246|Create a new map from the displayed drawing maps
+247|Created by
+248|Created on
+249|Ctrl+C
+250|Ctrl+D
+251|Ctrl+E
+252|Ctrl+I
+253|Ctrl+N
+254|Ctrl+O
+255|Ctrl+P
+256|Ctrl+Q
+257|Ctrl+S
+258|Ctrl+Z
+259|DXF
+260|Data Map
+261|Data Maps
+262|Del
+263|Delete the active map
+264|Depthmap
+265|Description
+266|Dialog
+267|Display full pages\nPrint Preview
+268|Display grid
+269|Display program information, version number and copyright\nAbout
+270|Distance from current selection\nMetric Depth
+271|Do you want to save the changes?
+272|Dot graph file (*.dot)
+273|Draw a new line\nLine
+274|Draw a new polygon\nPolygon
+275|Drawing Layers
+276|Drawing Layers: All Displayed
+277|Drawing Map
+278|E&xit
+279|Each radius in the list must either be 'n' or a number in the range 0.0 to infinity
+280|Each radius in the list must either be 'n' or a number in the range 1-99
+281|Edit
+282|Edit Connections
+283|Edit graph workspace properties\nWorkspace Properties
+284|Encapsulated Postscript (*.eps)\nScalable Vector Graphics (*.svg)\nAll files (*.*)
+285|Equal Ranges (3-Colour Hue Only)
+286|Equal Ranges (3-Colour)
+287|Equal Ranges (Blue-Red)
+288|Equal Ranges (Greyscale)
+289|Equal Ranges (Monochrome)
+290|Equal Ranges (Purple-Orange)
+291|Erase the selection\nErase
+292|Error
+293|Existing attributes
+294|Export a list of line-line intersections
+295|Export a list of line-line intersections and weights
+296|Export connections between cells in a visibility graph as an adjacency list
+297|Export the active map
+298|Export the geometry of the active map
+299|Export the links of the active map
+300|Export the screen as an Encapsulated Postscript file\nExport Screen
+301|Field of view (bins)
+302|File
+303|File loaded
+304|File not saved
+305|File saved
+306|File version
+307|Fill grid spaces individually (or click on a filled space to clear)\nPencil
+308|Find Location
+309|Fit map to window\nRecentre
+310|For more information or to submit a bug see:
+311|Foreground
+312|Formula
+313|Full Angular (Slower)
+314|Full isovist (360 degrees)
+315|Furthest occlusion per bin
+316|GML
+317|GRAPH
+318|Gate Map
+319|General
+320|General configuration
+321|Generate isovists from file...
+322|Generating grid points...
+323|Generating isovists...
+324|Get the PDF &Handbook
+325|Global setup
+326|Graph File Properties
+327|Graph file (*.graph)\n
+328|Graph file (*.graph)\nAll files (*.*)
+329|Graph file (*.graph)\ndepthmapX 8 graph (*.graph)\nAll files (*.*)
+330|GroupBox
+331|Half isovist (180 degrees)
+332|I have read this message, please do not display it again
+333|If destination object intersects more than\n one object in origin map
+334|If enabled, only Integration [HH] will be calulcated (or Visual Integration [HH] for VGA)
+335|Import
+336|Import Files
+337|Import Isovists File
+338|Import Links File
+339|Import Traces
+340|Import Unlink IDs
+341|Import VGA links from file...
+342|Import a DXF or points file\nImport Map
+343|Import agent traces from a file\nImport Traces
+344|Importing file...
+345|In memory of Alasdair Turner
+346|Include &global measures |    Select radius (n or number)->
+347|Include &local measures
+348|Include RA, RRA and total depth
+349|Include choice (betweenness)
+350|Include local measures
+351|Include weighted measures
+352|Index
+353|Interface
+354|Interface colours
+355|Invert Colour Range
+356|Invert the colour range\nInvert Colour Range
+357|Isovisit
+358|Isovist Options
+359|Isovist field of view
+360|Layer
+361|Layer\nLayer
+362|Legacy map window as default
+363|Licence message
+364|Line
+365|Line of Sight Length
+366|Link
+367|Load Unlinks from File...
+368|Location
+369|MDI
+370|MIF
+371|Make &Isovist Path...
+372|Make &Visibility Graph...
+373|Make Fewest Line Map Options
+374|Make Graph Options
+375|Make a new isovist\nIsovist
+376|Make a new partial isovist\nPartial Isovist
+377|Make boundary graph
+378|Make selection
+379|Make sure a Visibility Graph is visible
+380|Make sure the visibility graph was created (Tools -> Visibility -> Make Visibility Graph)
+381|Map (Open&GL)
+382|Map type
+383|MapInfo file (*.mif)\n
+384|Maximum
+385|Maximum distance must be over 0.0 if visibility is restricted
+386|Metric
+387|Metric (Physical Distance)
+388|Minimum
+389|Movement rule:
+390|My Application
+391|NET
+392|NTF
+393|Name
+394|New Map
+395|New Map Name
+396|New Map Type
+397|No data source layers for unlink points
+398|No file selected
+399|No graph
+400|No lines available in current layer to convert to axial lines
+401|No lines available in current layer to convert to segments
+402|No lines exist in map to convert to segments
+403|No objects currently visible in drawing layers
+404|No polygons currently visible in drawing layers
+405|No valid map displayed from which to push data
+406|No value
+407|Note: the formula may have been applied to a subset of objects
+408|Notice
+409|Number of antialising samples:
+410|OK
+411|Occluded Length
+412|Occlusions Group bins (45 degrees)
+413|Occlusions Group bins (60 degrees)
+414|Online &Scripting Manual
+415|Online &Tutorials
+416|Open
+417|OpenGL view options
+418|Options...
+419|Organization
+420|Orgin Map
+421|Origin attribute
+422|Origin map
+423|Overlay grid on plan\nSet Grid
+424|P&rint Setup...
+425|Pajek (*.net)\n
+426|Partial isovisist
+427|Per bin angle weighted
+428|Per bin far distance and angle weighted
+429|Per bin far distance weighted
+430|Per bin memory
+431|Performing agent analysis...
+432|Performing axial line analysis...
+433|Performing metric analysis...
+434|Performing segment line analysis...
+435|Performing topological analysis...
+436|Pesh Map
+437|Play Loop
+438|Please enter a formula
+439|Please enter a name for the new map
+440|Please make grid before filling
+441|Please select source layer for unlink points
+442|Please select the attribute the file uses as the key for the unlinks
+443|Please wait, another process is running
+444|Please wait, another task is running
+445|PlotEdit
+446|Polygon
+447|Polygon radius
+448|Print Pre&view
+449|Print the active graph workspace\nPrint Workspace
+450|Properties...
+451|Push Values to Map
+452|Push values from active map to another map\npushValue
+453|Push values to
+454|Quarter isovist (90 degrees)
+455|Query
+456|Quit the application; prompts to save documents\nExit
+457|RT1
+458|Radius
+459|Radius (Metric units)
+460|Radius / List of radii
+461|Radius / list of radii, e.g., 2,3,n
+462|Radius Type
+463|Ready
+464|Record gate counts in data map
+465|Record object intersection count
+466|Record trails for
+467|Red
+468|Reduce to &Fewest Line Map...
+469|Reduce to fewest connections
+470|Ref Number
+471|Release from any location
+472|Release from selected locations
+473|Release rate (agents per timestep)
+474|Remove
+475|Remove all subsets
+476|Remove axial stubs less than
+477|Remove column from the active map\nRemove column
+478|Rename Column
+479|Rename column to:
+480|Rename the currently displayed attribute
+481|Replace
+482|Replace Attribute Values
+483|Replace column contents requires either a shape map or visibility graph
+484|Replace column contents using a SalaScript command\nUpdate Column
+485|Restrict visibile distance to 
+486|Retain original map
+487|Run &Topological or Metric Analysis...
+488|Rxb2 = %1
+489|Save
+490|Save &As...
+491|Save As
+492|Save Output As
+493|Save Screen As
+494|Save the active graph workspace\nSave workspace
+495|Save the active graph workspace with a new name\nSave Workspace As
+496|See the Original SalaScript web page
+497|Segment Analysis Options
+498|Segment Map
+499|Segment Steps
+500|Select a grid point\nSelect
+501|Select by &Query
+502|Selected segments only\n(Note: does not perform choice calculation)
+503|Selection to &Layer...
+504|Set Grid
+505|Set Grid Properties
+506|Settings
+507|Shape Graphs
+508|Show &Grid
+509|Show polygon centroids
+510|Show polygon edges
+511|Show polygons filled
+512|Show regression line\nView trend line
+513|Show research toolbar (Don't USE!)
+514|Show summarised attribute information for selected points
+515|Simple Version
+516|Simple mode
+517|Sorry, all line map must exist in order to construct fewest line map
+518|Sorry, another column already has this name, please choose a unique column name
+519|Sorry, cannot export as another process is running
+520|Sorry, cannot export as there is no data to export
+521|Sorry, depthmapX can only export VGA graphs or shape graphs to Pajek .net files
+522|Sorry, depthmapX currently only supports exporting VGA, axial and shape data to MapInfo tables
+523|Sorry, depthmapX does not support saving the currently displayed layer
+524|Sorry, depthmapX only supports exporting VGA, axial and shape data to graph files
+525|Sorry, line drawing data must be loaded before an axial map can be constructed
+526|Sorry, line drawing data must be loaded before an isovist can be constructed
+527|Sorry, line drawing data must be loaded before points may be filled
+528|Sorry, no undo available for this map
+529|Sorry, once the graph has been constructed, more points may not be added
+530|Sorry, unable to open 
+531|Sorry, unable to open associated .mid file for export
+532|Sorry, unable to open file for export
+533|Sorry, you need an unprocessed set of points to make the visibility graph
+534|Spacing
+535|Standard
+536|Standard Fill
+537|Standard Fill grid spaces with points\nFill
+538|Std Dev
+539|Step &Depth
+540|Step depth from current selection\nStep Depth
+541|Steps before turn decision
+542|Submit Problems/Ideas
+543|Summary statistics for the active attribute
+544|T&ile
+545|TXT
+546|Tab-delimited text file (*.txt)\n
+547|Take average attribute value
+548|Take maximum attribute value
+549|Take minimum attribute value
+550|Take total of attribute values
+551|Text files (*.txt)\nAll files (*.*)
+552|The imported MIF file contains multiple shapes per object.\n Please note that depthmapX has broken these up, so each shape has one row of attribute data.\n Please consult your MapInfo provider for details.
+553|The number of tulip bins must be an even number
+554|The radius must either be 'n' or a number in the range 0.0 to infinity
+555|The radius must either be n or a number in the range 1-99
+556|The radius must either be n or a positive number
+557|The radius must either be n or number in range 1-99
+558|The radius must either be numeric or 'n'
+559|The radius must either be numeric or 'n'\n Alternatively, for multiple radii, type a list of comma separated numeric radii (you can include 'n')
+560|The radius must either be numeric or 'n'\nAlternatively, for multiple radii, type a list of comma separated numeric radii (you can include 'n')
+561|There is already a fewest line axial map, would you like to add to it or replace it?
+562|There was an error opening the file.\nPlease check the file is not already open
+563|There was an error reading the unlink file.\ndepthmapX is expecting a tab delimited set of unlink IDs
+564|Third isovist (120 degrees)
+565|This column is locked and cannot be edited
+566|This graph file was created by a version of depthmapX with slight errors.  Are you sure you want to save it?
+567|This map is displaying in monochrome, which is not yet supported.  Please note your SVG file will be empty.  Sorry for the inconvenience.
+568|This point is outside the bounds of your map
+569|This program is free software: you can redistribute it and/or modify it under the terms of the GNU General Public License as published by the Free Software Foundation, either version 3 of the License, or (at your option) any later version.x0Dx0Dx0Ax0Dx0Dx0AThis program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU General Public License for more details.x0Dx0Dx0Ax0Dx0Dx0AYou should have received a copy of the GNU General Public License along with this program.  If not, see <http://www.gnu.org/licenses/>.
+570|This will clear existing data and attributes. Do you want to continue?
+571|This will clear existing points.  Do you want to continue?
+572|This will make lines smoother if higher, but also the overall rendering slower. To see the change close and reopen the file
+573|This will overwrite the file with the latest graph format, which may not be readable by previous versions of depthmapX.\nDo you want to overwrite it?
+574|This will overwrite your existing all-line map, do you want to continue?
+575|Timesteps in system
+576|Title
+577|To get a path you will need some lines for a path.\nTo do so, have an active map which is either a data map or line map of some sort.\nNext, select lines or polylines that you wish to turn into isovist paths.\nThere is no need for you to have a grid set.\n
+578|To see this and other depthmapX alerts, please visit:
+579|Toggle Colour
+580|Toggle colour display on and off\nToggle Colour
+581|Toggle graph intersect at origin of X, Y values\nToggle origin on/off
+582|Toggle origin on/off
+583|Topological (Axial)
+584|Tulip Analysis (Faster)
+585|Tulip Bins (4 to 1024)
+586|Unable to open graph: an error occurred while trying to read from the disk.
+587|Unable to open graph: error number 
+588|Unable to open graph: not recognised as a graph file.
+589|Unable to open graph: the graph file is damaged.
+590|Unable to open graph: this graph has been written by a newer version of depthmapX.
+591|Unable to open graph: this is a graph file format not supported by this version of depthmapX.
+592|Unable to read text file.\nPlease check that another program is not using it.
+593|Unable to save graph: is there enough disk space?
+594|Unable to understand agent program
+595|Undo the last action\nUndo
+596|Unmake &Visibility Graph...
+597|Unrecognised file format.  Sorry, unable to import this file.
+598|Untitled%1
+599|Values
+600|Version %1.%2.%3 (%4, %5)
+601|View or Submit Problems and Ideas online
+602|View the Original Depthmap Researchers' Handbook
+603|View the Original Depthmap tutorials online
+604|View trend line
+605|Visibility Graph Connections as CSV...
+606|Visibility Graphs
+607|Warning
+608|Warning: this graph was made with an older version of depthmapX.\n
+609|Weight by
+610|Weighted measures
+611|Welcome to depthmapX
+612|Would you also like to clear the links?
+613|X = 
+614|Y = 
+615|You already have line data loaded.  Do you want to\n add this new file to the existing line data, replace \nthe existing line data, or cancel?
+616|You have selected more than one file.  Unfortunately, this feature is only currently available with NTF, GML and Tiger line files.\nPlease select a single file to import only.
+617|Zoom in
+618|Zoom in around current selection\nZoom to Selection
+619|Zoom in on current selected items\nZoom to Selection
+620|Zoom into or out of (using Alt-key) view of map\nZoom In
+621|Zoom out
+622|Zoom out of or into (using Alt-key) view of map\nZoom Out
+623|Zoom to Selection
+624|_
+625|agents
+626|axial_connections
+627|connectivity
+628|depthmapX
+629|depthmapX Classic
+630|depthmapX Options
+631|depthmapX had a problem reading the header information in your MIF file.
+632|depthmapX had a problem reading the table data in your MID file.
+633|depthmapX is processing, please kill the process to continue
+634|depthmapX was unable to parse the isovists test file. Error: %1
+635|document%1.txt
+636|links
+637|merge points together\nLink
+638|merge_lines
+639|mid
+640|n
+641|old
+642|points
+643|segment_connections
+644|this graph was made with a version of depthmapX that contained slight errors
+645|unLink
+646|unlinks
+647|unmerge points\nUnlink
+648|value("
+649|vga
+650|x
+651|y
+652|y = %1 x + %1
+653|y = %1 x - %1
