@@ -1,0 +1,4 @@
+name: ping
+on: workflow_dispatch
+jobs:/n  ping:/n    runs-on: ubuntu-latest
+    steps:/n      - run: echo hello
