@@ -1,8 +1,13 @@
 name: zh-cn windows build
 
-# 只为中文汉化版服务的工作流：在 GitHub Actions 上完成
-#   lupdate 抽取文案 -> 用 translations/depthmapX_zh_CN.json 填充 -> lrelease 编译 .qm
-#   -> 编译 depthmapX.exe -> windeployqt 打包 -> 上传 artifact
+# 只为中文汉化版服务的工作流，分两个任务：
+#   qm   (ubuntu)   : lupdate 抽取文案 -> 填词 -> lrelease 编译 .qm
+#   win64(windows)  : 下载 .qm -> 编译 depthmapX.exe -> windeployqt 打包 -> 上传 artifact
+#
+# 为什么 .qm 在 Linux 上编译：Qt5 的 .qm 是平台无关的二进制格式；而 Windows 的
+# Qt5 安装包（aqt）里没有 qttools 模块可装，lrelease 不一定存在。Linux 上
+# qttools5-dev-tools 是确定可用的，因此把语言包的生成与平台解耦。
+#
 # 触发：向 zh-cn 分支推送，或手动 workflow_dispatch。
 
 on:
@@ -11,48 +16,60 @@ on:
   workflow_dispatch:
 
 jobs:
-  win64:
-    name: build win64 (zh_CN)
-    runs-on: windows-latest
+  qm:
+    name: build translations (zh_CN)
+    runs-on: ubuntu-22.04
     steps:
       - uses: actions/checkout@v5
 
-      - name: Install Qt5 with linguist tools
-        uses: jurplel/install-qt-action@v4
-        with:
-          version: '5.15.2'
-          arch: win64_msvc2019_64
-          modules: 'qttools'
-
-      - name: Verify linguist tools
-        shell: bash
+      - name: Install Qt5 linguist tools
         run: |
-          set -eu
-          if ! command -v lrelease >/dev/null || ! command -v lupdate >/dev/null; then
-            echo "::error::lrelease/lupdate 未安装（需要 qttools 模块）"
-            exit 1
-          fi
-          lrelease -version
-          lupdate -version
+          sudo apt-get update
+          sudo apt-get install -y qtbase5-dev qttools5-dev-tools
 
       - name: Extract strings (lupdate)
-        shell: bash
         run: |
           set -eu
+          export PATH="/usr/lib/qt5/bin:$PATH"
+          lupdate -version
           mkdir -p i18n
           lupdate -recursive depthmapX -ts i18n/depthmapX_zh_CN.ts
           echo "提取条目数: $(grep -c '<message' i18n/depthmapX_zh_CN.ts)"
 
       - name: Fill translations
-        shell: bash
-        run: python tools/fill_ts.py i18n/depthmapX_zh_CN.ts translations/depthmapX_zh_CN.json
+        run: |
+          python3 tools/fill_ts.py i18n/depthmapX_zh_CN.ts translations/depthmapX_zh_CN.json
 
       - name: Compile .qm
-        shell: bash
         run: |
           set -eu
+          export PATH="/usr/lib/qt5/bin:$PATH"
           lrelease i18n/depthmapX_zh_CN.ts -qm i18n/depthmapX_zh_CN.qm
-          ls -l i18n
+          ls -l i18n/
+
+      - uses: actions/upload-artifact@v5
+        with:
+          name: depthmapX-zh_CN-qm
+          path: i18n/depthmapX_zh_CN.qm
+          if-no-files-found: error
+
+  win64:
+    name: build win64 (zh_CN)
+    needs: qm
+    runs-on: windows-latest
+    steps:
+      - uses: actions/checkout@v5
+
+      - uses: actions/download-artifact@v6
+        with:
+          name: depthmapX-zh_CN-qm
+          path: i18n
+
+      - name: Install Qt5
+        uses: jurplel/install-qt-action@v4
+        with:
+          version: '5.15.2'
+          arch: win64_msvc2019_64
 
       - name: Configure
         shell: bash
